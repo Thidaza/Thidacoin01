@@ -1,0 +1,138 @@
+
+Chapter#1: Installation/configuration
+=====================================
+
+1. Install node.js >> web
+2. Install yarn >> https://yarnpkg.com/en/docs/usage or "npm -i g yarn"
+3. D:\01_Projects\00_Thidacoins\00_Project01> yarn init -y
+
+4. Got "packge.json"
+{
+  "name": "00_Project01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+  "scripts": {
+  	"start": "node app.js"
+  	"test" : "echo test"
+  }
+}
+cmd> yarn start		or cmd> npm start
+cmd> yarn test		or cmd> npm run 
+
+5. Add all the dependency files
+D:\01_Projects\00_Thidacoins\00_Project01> yarn add express
+D:\01_Projects\00_Thidacoins\00_Project01> yarn
+D:\01_Projects\00_Thidacoins\00_Project01> yarn add crypto-js
+D:\01_Projects\00_Thidacoins\00_Project01> yarn add sha256
+
+6. Change my editor to VSCode, installing extensions:
+- Prettier Code Formatter
+- ESLint
+- Javascript (ES6) code snippets
+- Code Runner
+- IntelliSense for CSS class names
+- Path Intellisense
+- Wallaby.js (trial-testing tool, pay to use further)
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Coding - Node.js
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+7. Ethereum testrpc
+
+D:\01_Projects\00_Thidacoins\00_Project01>npm install -g ethereumjs-testrpc
+npm WARN deprecated ethereumjs-testrpc@6.0.3: ethereumjs-testrpc has been renamed to ganache-cli, please use this package from now on.
+C:\Program Files\nodejs\testrpc -> C:\Program Files\nodejs\node_modules\ethereumjs-testrpc\build\cli.node.js
+
+> uglifyjs-webpack-plugin@0.4.6 postinstall C:\Program Files\nodejs\node_modules\ethereumjs-testrpc\node_modules\uglifyjs-webpack-plugin
+> node lib/post_install.js
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.3 (node_modules\ethereumjs-testrpc\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ ethereumjs-testrpc@6.0.3
+added 251 packages in 17.922s
+
+D:\01_Projects\00_Thidacoins\00_Project01>testrpc
+EthereumJS TestRPC v6.0.3 (ganache-core: 2.0.2)
+
+Available Accounts
+==================
+(0) 0x1dea8a494f65ae1cc4e23dd40b3b0a2f1266c9e4
+(1) 0x6f2154c423c5f49569b79117cf8b66a30ceb0efe
+(2) 0x7779e5b87fa393b444736f5c23af9211439ff943
+(3) 0x84ecc5dff0ac6b6d2eb575842c2b804a5ce5b2f8
+(4) 0xd91274bd893c8ee88f030d367d40da93ecc166ea
+(5) 0x4e1377c74f468fb2fb0385711a797d61326d2fd4
+(6) 0x633257bee13c49759c519ec734716bd2177615ca
+(7) 0x6d3190815732d91df4bc795aabc525bf397fa60c
+(8) 0x2a15d76322aa96fa70bc9abb7638545a93d27124
+(9) 0x1292a77a5af56878a6fe4e287d80419898359f06
+
+Private Keys
+==================
+(0) 0c453fb0491267ad40a3d6eca947ad777ff7fcb8f3b10208eee5dc4a5ef65a8f
+(1) cead734e5a14cb1626710e15d330e04ff213761b4310ad1aa17260c002d8b78a
+(2) da2b16e7b2710fc4fd2385e37ecb418a5dab0a3fad30745fad48c0f84201e038
+(3) df1fc98e98fb377d6e6f81d79e96ce3014ce94fb095339260cf29cc760c1d14a
+(4) 85ebcb56390d634b558e3ef82507dca62e55aeaa6beeb27bea4de5a365c4e1ac
+(5) 1c4ae35bf40bdb18cd9e84628031366c7f189145aefc2279e50dd89763d21f23
+(6) d1315aaa8f0d3f9c35dd87e0dc861528d3daa5d64fe417a3797452c0d3cf8740
+(7) e19e630b9428a0529abcf25a87d45519aa97098984ea142a85e5121e57a9c1d8
+(8) 6d96b635874bfd021d45f46d2954431dc452ae9071ab3d41bd1df46439eeb024
+(9) ed9668fe672fae506579ed88ed37cd16f23607fd19c3111028443f8643bed5a8
+
+HD Wallet
+==================
+Mnemonic:      broom carpet way vote dolphin sketch again dragon exact gas general tuna
+Base HD Path:  m/44'/60'/0'/0/{account_index}
+
+Listening on localhost:8545
+
+8. web3.js >> https://github.com/ethereum/web3.js/  >> make sure to choose Branch=1.0 [default google result would be on "developer"]
+
+D:\01_Projects\00_Thidacoins\00_Project01>npm install web3
+npm WARN deprecated fs-promise@2.0.3: Use mz or fs-extra^3.0 with Promise Support
+npm WARN deprecated tar.gz@1.0.7: ⚠️  WARNING ⚠️ tar.gz module has been deprecated and your application is vulnerable. Please use tar module instead: https://npmjs.com/tar
+npm WARN deprecated minimatch@0.3.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm ERR! code ENOGIT
+npm ERR! No git binary found in $PATH
+npm ERR!
+npm ERR! Failed using git.
+npm ERR! Please check if you have git installed and in your PATH.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\thida\AppData\Roaming\npm-cache\_logs\2017-12-30T19_14_24_567Z-debug.log
+
+D:\01_Projects\00_Thidacoins\00_Project01>
+
+--------------------------------------------------
+
+Had to install Python2.7
+
+npm config set msvs_version 2015 --global
+npm install --global --production windows-build-tools >> Winner!! (cmd with administrative privilege)
+
+npm install web3
++ web3@1.0.0-beta.27
+added 8 packages in 21.969s
+
+================================
+
+9. Testing web3.js
+
+const Web3 = require('web3');
+const web3 = new Web3();
+
+console.log(web3);
+console.log(Web3.providers);
+
+Web3 {currentProvider: <accessor>, _requestManager: RequestManager, givenProvider: null, providers: Object, _provider: null, …}
+Object {WebsocketProvider: , HttpProvider: , IpcProvider: }
+
+using httpProvider >> due to testrpc
+
+to study web3 >> https://web3js.readthedocs.io/en/1.0/web3-eth-accounts.html
